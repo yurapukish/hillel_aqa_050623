@@ -11,3 +11,7 @@ x = 121  #
 z = str(x)[::-1]
 assert str(x) == z, 'Not palindrome'
 print('Palindrome')
+
+# ternar if solution
+val = True if str(x) == str(x)[::-1] else False
+print(val)
