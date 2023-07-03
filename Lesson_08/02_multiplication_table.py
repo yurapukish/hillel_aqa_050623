@@ -8,6 +8,7 @@ caption = [str(el) for el in range(1, num + 1)]
 print(' '.join(caption))
 print('-' * 10)
 
+# O(n^2)
 multiplication_table = []
 for i in range(1, num + 1):
     curr_row_el = []
