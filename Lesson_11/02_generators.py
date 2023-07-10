@@ -64,7 +64,7 @@ def read_in_chunks(fh, chunk_size):
         print(f'Chunk #{i}')
 
 
-with open('../../Lesson_11/big_file.txt') as big_fh:
+with open('big_file.txt') as big_fh:
     for i, _ in enumerate(read_in_chunks(big_fh, 1024), start=1):
         pass
 
