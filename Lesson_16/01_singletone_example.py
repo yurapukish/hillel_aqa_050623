@@ -54,7 +54,7 @@ class DatabaseConnection:
 
 
 # Usage example
-db_file_name = "../../Lesson_16/example.db"
+db_file_name = "example.db"
 db_users = [('John', 'Doe'),
             ('Jane', 'Smith'),
             ('Tom', 'Hanks')]
