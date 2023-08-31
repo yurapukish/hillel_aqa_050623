@@ -29,6 +29,7 @@ def test_signin_positive():
     assert r_json.get('status', False) == "ok", "Key 'status' is not ok"
 
 def get_a(a):
+    """Nazva testu"""
     return int(a)
 
 def test_error():
