@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f50fdb5-c87b-428e-a660-7d6414c85296" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/heartbeat/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heartbeat/my_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heartbeat/hb_proces.py" beforeDir="false" afterPath="$PROJECT_DIR$/heartbeat/hb_proces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_23/homework.md" beforeDir="false" afterPath="$PROJECT_DIR$/heartbeat/homework.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hillel_aqa_new_teacher" beforeDir="false" afterPath="$PROJECT_DIR$/hillel_aqa_new_teacher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hillel_aqa_new_teacher/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/hillel_aqa_new_teacher/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +33,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/user/PycharmProjects/AutomationCourseNew/heartbeat"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/user/PycharmProjects/AutomationCourseNew/heartbeat&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/heartbeat" />
