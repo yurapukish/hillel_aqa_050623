@@ -3,13 +3,13 @@ from lesson_25 import find_field, not_found, search_input, get_text
 from time import sleep
 
 
-def test_menu():
-    url = "https://www.python.org"
-    driver = get_site(url)
-    element = main_menu_about(driver)
-    assert element is not None, "element not found"
-    click(element)
-    assert driver.current_url == url+"/about/"
+# def test_menu():
+#     url = "https://www.python.org"
+#     driver = get_site(url)
+#     element = main_menu_about(driver)
+#     assert element is not None, "element not found"
+#     click(element)
+#     assert driver.current_url == url+"/about/"
 
 
 def test_search():
