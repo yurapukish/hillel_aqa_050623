@@ -18,7 +18,7 @@ def test_search():
     element = find_field(driver)
     assert element is not None, "element not found"
     search_input(element, "python")
-    sleep(0.5)
+    sleep(1)
     element = not_found(driver)
     text = get_text(element)
     assert text != "No results found.", "Search doesn't work"
