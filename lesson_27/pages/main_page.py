@@ -1,10 +1,14 @@
 from selenium.webdriver import Remote
-from pages.base_page import BasePage
-from locators.catalogue_item import CatalogueItemLocator as CIL
+
+from hillel_aqa_050623.lesson_27.pages.base_page import BasePage
+from hillel_aqa_050623.lesson_27.locators.catalogue_item import CatalogueItemLocator as CIL
+
+# from pages.base_page import BasePage
+# from locators.catalogue_item import CatalogueItemLocator as CIL
 
 
 class MainPage(BasePage):
-    def __init__(self, web_driver: Remote):
+    def __init__(self, web_driver):
         super().__init__(web_driver)
         self.web_driver.get("https://parfums.ua/ua/")
 

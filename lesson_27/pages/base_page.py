@@ -2,8 +2,12 @@ from selenium.webdriver import Remote, ActionChains
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from locators.base_page import BasePageLocators
-from locators.catalogue_item import CatalogueItemLocator
+from hillel_aqa_050623.lesson_27.locators.base_page import BasePageLocators
+from hillel_aqa_050623.lesson_27.locators.catalogue_item import CatalogueItemLocator
+
+
+# from locators.base_page import BasePageLocators
+# from locators.catalogue_item import CatalogueItemLocator
 
 class BasePage:
 
@@ -29,10 +33,9 @@ class BasePage:
             expected_conditions.element_to_be_clickable(
                 (BasePageLocators.GENERAL_MENU_TOPIC.by,
                  BasePageLocators.GENERAL_MENU_TOPIC.locator.format(data_item)
-                )
+                 )
             )
         )
-    
 
     def go_to_women_parfumes(self):
         self.get_menu_item(
