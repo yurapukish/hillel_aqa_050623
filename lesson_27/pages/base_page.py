@@ -5,14 +5,17 @@ from selenium.webdriver.support.wait import WebDriverWait
 from hillel_aqa_050623.lesson_27.locators.base_page import BasePageLocators
 from hillel_aqa_050623.lesson_27.locators.catalogue_item import CatalogueItemLocator
 
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 # from locators.base_page import BasePageLocators
 # from locators.catalogue_item import CatalogueItemLocator
 
+
 class BasePage:
 
-    def __init__(self, web_driver: Remote):
-        self.__web_driver: Remote = web_driver
+    def __init__(self):
+        self.__web_driver: webdriver.Chrome(ChromeDriverManager().install())
         self.__action = ActionChains(self.__web_driver)
         self.__wait = WebDriverWait(self.__web_driver, 15)
 
