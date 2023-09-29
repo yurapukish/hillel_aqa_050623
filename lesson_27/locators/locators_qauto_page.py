@@ -30,3 +30,4 @@ class MainPageLocators(BaseLocators):
     EDIT_CAT_BTN = (By.XPATH, '//button[@class="car_edit btn btn-edit"]')
     DELETE_CAR_BTN = (By.XPATH, '//button[@class="btn btn-outline-danger"]')
     CONFIRM_DELETE_CAR_BTN = (By.CSS_SELECTOR, '.modal-content .btn.btn-danger')
+    HEADER_LOGO = (By.CLASS_NAME, 'header_logo')

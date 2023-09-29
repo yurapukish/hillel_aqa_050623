@@ -10,7 +10,7 @@ from hillel_aqa_050623.lesson_27.locators.locators_qauto_page import MainPageLoc
 from hillel_aqa_050623.lesson_27.test.conftest import USERNAME, PASSWORD, URL, USER_DATA
 
 
-# 1
+#1
 def test_login_as_guest(open_students_site):
     # USE FIXTURE FOR OPENING THE PAGE AND INITIALIZED DRIVER
     driver, page = open_students_site
@@ -23,6 +23,8 @@ def test_login_as_guest(open_students_site):
         assert page.wait.until(expected_conditions.url_contains('/panel/garage'))
     except Exception:
         print(f'URL is not correct, received: {driver.current_url}')
+    # LOGOUT
+    driver.find_element(MainPageLocators.LOG_OUT.by, MainPageLocators.LOG_OUT.locator).click()
 
 
 # 2
@@ -41,6 +43,9 @@ def test_login_as_exist_user(open_students_site):
         assert page.wait.until(expected_conditions.url_contains('/panel/garage'))
     except Exception:
         print(f'URL is not correct, received: {driver.current_url}')
+    # LOGOUT
+    driver.find_element(MainPageLocators.LOG_OUT.by, MainPageLocators.LOG_OUT.locator).click()
+    driver.find_element(MainPageLocators.HEADER_LOGO.by, MainPageLocators.HEADER_LOGO.locator).click()
 
 
 # 3
@@ -89,14 +94,16 @@ def test_add_car(open_as_logged_user):
     driver, page = open_as_logged_user
 
     # Get CARS amount before update
-    cars_amount = len(page.wait.until(EC.presence_of_all_elements_located(
-        (MainPageLocators.CARS.by, MainPageLocators.CARS.locator))))
+    cars_amount = len(driver.find_elements(
+        MainPageLocators.CARS.by, MainPageLocators.CARS.locator))
+
     # ADD CAR
     page.add_car()
 
     # Get CARS amount after update
-    cars_amount_new = len(driver.find_elements(MainPageLocators.CARS.by, MainPageLocators.CARS.locator))
+    cars_amount_new = len(page.wait.until(EC.presence_of_all_elements_located((MainPageLocators.CARS.by, MainPageLocators.CARS.locator))))
     assert cars_amount_new > cars_amount, f'Cars amount is not increased'
+    driver.find_element(MainPageLocators.HEADER_LOGO.by, MainPageLocators.HEADER_LOGO.locator).click()
 
 
 # 6
@@ -114,6 +121,7 @@ def test_update_car_miles(open_as_logged_user):
     # UPDATE CAR MILES
     new_miles = str(random.randint(2222, 9999))
     page.update_car_miles(new_miles)
+    driver.find_element(MainPageLocators.HEADER_LOGO.by, MainPageLocators.HEADER_LOGO.locator).click()
 
 
 # 7
@@ -130,3 +138,7 @@ def test_delete_all_cars(open_as_logged_user):
 
     # DELETE ALL CARS
     page.delete_all_cars(cars_amount)
+    driver.find_element(MainPageLocators.HEADER_LOGO.by, MainPageLocators.HEADER_LOGO.locator).click()
+    # LOGOUT
+    driver.find_element(MainPageLocators.LOG_OUT.by, MainPageLocators.LOG_OUT.locator).click()
+
